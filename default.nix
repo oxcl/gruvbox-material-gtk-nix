@@ -1,6 +1,7 @@
 {pkgs ? import <nixpkgs> {},...}: with pkgs; stdenv.mkDerivation rec {
-  name = "gruvbox-material-gtk";
-  buildInputs = [ gtk-engine-murrine ];
+  pname = "gruvbox-material-gtk";
+  version = "0.0.1";
+  propagatedUserEnvPkgs = [ gtk-engine-murrine ];
   src = fetchFromGitHub {
     owner = "TheGreatMcPain";
     repo = "gruvbox-material-gtk";
@@ -15,4 +16,10 @@
     cp -r icons/* $out/share/icons
     runHook postInstall
   '';
+  meta = with lib; {
+    description = "Gruvbox Material for GTK, Gnome, Cinnamon, XFCE, Unity, Plank and Icons";
+    homepage = "https://github.com/TheGreatMcPain/gruvbox-material-gtk";
+    license = licenses.mit;
+    platforms = platforms.all;
+  }
 }
