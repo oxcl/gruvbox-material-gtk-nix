@@ -1,4 +1,4 @@
-{pkgs ? import <nixpkgs> {} }: with pkgs; stdenv.mkDerivation rec {
+{pkgs ? import <nixpkgs> {} }: with pkgs; stdenvNoCC.mkDerivation rec {
   pname = "gruvbox-material-gtk";
   version = "0.0.1";
   propagatedUserEnvPkgs = [ gtk-engine-murrine ];
