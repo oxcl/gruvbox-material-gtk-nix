@@ -14,7 +14,7 @@
     packages.x86_64-linux.default = self.packages.x86_64-linux.gruvbox-material-gtk;
 
     overlays.default = final: prev: {
-      gruvbox-material-gtk = self.packages.x86-64-linux.default;
+      gruvbox-material-gtk = self.packages.x86_64-linux.default;
     };
   };
 }

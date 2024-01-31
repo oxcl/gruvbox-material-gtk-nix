@@ -21,5 +21,5 @@
     homepage = "https://github.com/TheGreatMcPain/gruvbox-material-gtk";
     license = licenses.mit;
     platforms = platforms.all;
-  }
+  };
 }
